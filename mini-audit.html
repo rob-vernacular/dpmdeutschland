@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Audit - DPM Digital Partner Mittelstand</title>
+  <meta name="description" content="Ihr Optimierungspotenzial in 48 Stunden. Fragebogen ausfüllen, 250 EUR zahlen, schriftlichen Bericht erhalten. Ohne Wartezeit, ohne Termin.">
+  <meta property="og:title" content="Mini-Audit - DPM Digital Partner Mittelstand">
+  <meta property="og:description" content="Ihr Optimierungspotenzial in 48 Stunden. 250 EUR. Bericht per E-Mail.">
+  <meta property="og:image" content="images/hero-bg.jpg">
+  <meta name="theme-color" content="#0B1628">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,700;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="nav-overlay"></div>
+
+  <nav class="nav scrolled" role="navigation" aria-label="Hauptnavigation">
+    <a href="index.html" class="nav-logo" aria-label="DPM Startseite">
+      <span class="nav-logo-text">DPM</span>
+      <span class="nav-logo-line"></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="leistungen.html" class="nav-link">Leistungen</a></li>
+      <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+      <li><a href="referenzen.html" class="nav-link">Referenzen</a></li>
+      <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta nav-desktop">Erstgespräch vereinbaren</a>
+    <button class="hamburger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <nav class="nav-drawer" role="navigation" aria-label="Mobile Navigation">
+    <a href="leistungen.html" class="nav-drawer-link">Leistungen</a>
+    <a href="ueber-uns.html" class="nav-drawer-link">Über uns</a>
+    <a href="referenzen.html" class="nav-drawer-link">Referenzen</a>
+    <a href="kontakt.html" class="nav-drawer-link">Kontakt</a>
+    <a href="kontakt.html" class="nav-drawer-cta">Erstgespräch vereinbaren</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="audit-heading">
+    <div class="page-hero-inner">
+      <span class="eyebrow">MINI-AUDIT</span>
+      <h1 id="audit-heading">Ihr Optimierungspotenzial.<br>In <em>48 Stunden.</em></h1>
+      <p class="mt-20" style="font-size:18px; color:var(--w60); max-width:540px; line-height:1.65;">Füllen Sie den Fragebogen aus. Wir melden uns innerhalb von 24 Stunden mit dem Bericht und dem nachsten Schritt.</p>
+
+      <div class="audit-steps mt-32">
+        <div class="audit-step active">
+          <span class="audit-step-num">1</span>
+          <span>Fragebogen</span>
+        </div>
+        <span class="audit-step-sep"></span>
+        <div class="audit-step">
+          <span class="audit-step-num">2</span>
+          <span>Zahlung</span>
+        </div>
+        <span class="audit-step-sep"></span>
+        <div class="audit-step">
+          <span class="audit-step-num">3</span>
+          <span>Bericht per E-Mail</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAGEBOGEN -->
+  <section class="bg-night" aria-labelledby="fragebogen-heading">
+    <div class="section">
+      <div class="form-card">
+        <h2 id="fragebogen-heading" style="font-size:32px; margin-bottom:8px;">Ihr <em>Betrieb.</em></h2>
+        <p style="font-size:14px; color:var(--w30); margin-bottom:36px;">Alle Felder sind Pflichtfelder, sofern nicht anders markiert.</p>
+
+        <form id="mini-audit-form" novalidate>
+
+          <!-- 1. Unternehmensname -->
+          <div class="form-group">
+            <label class="form-label" for="company">1. Unternehmensname</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Ihr Unternehmen" required>
+          </div>
+
+          <!-- 2. Branche -->
+          <div class="form-group">
+            <label class="form-label" for="branche">2. Branche</label>
+            <select id="branche" name="branche" class="form-select" required>
+              <option value="" disabled selected>Bitte wahlen</option>
+              <option value="gastronomie">Gastronomie</option>
+              <option value="handel">Handel</option>
+              <option value="produktion">Produktion</option>
+              <option value="dienstleistung">Dienstleistung</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </div>
+
+          <!-- 3. Mitarbeitende -->
+          <div class="form-group">
+            <label class="form-label" for="mitarbeiter">3. Anzahl Mitarbeitende</label>
+            <select id="mitarbeiter" name="mitarbeiter" class="form-select" required>
+              <option value="" disabled selected>Bitte wahlen</option>
+              <option value="10-50">10 bis 50</option>
+              <option value="51-150">51 bis 150</option>
+              <option value="151-500">151 bis 500</option>
+              <option value="501-2000">501 bis 2.000</option>
+              <option value="2000+">über 2.000</option>
+            </select>
+          </div>
+
+          <!-- 4. Umsatz -->
+          <div class="form-group">
+            <label class="form-label" for="umsatz">4. Jahresumsatz ca.</label>
+            <select id="umsatz" name="umsatz" class="form-select" required>
+              <option value="" disabled selected>Bitte wahlen</option>
+              <option value="bis2m">bis 2 Mio.</option>
+              <option value="2-10m">2 bis 10 Mio.</option>
+              <option value="10-50m">10 bis 50 Mio.</option>
+              <option value="50m+">über 50 Mio.</option>
+            </select>
+          </div>
+
+          <!-- 5. Handlungsbedarf -->
+          <div class="form-group">
+            <label class="form-label">5. Größter Handlungsbedarf (Mehrfachauswahl moglich)</label>
+            <div class="checkbox-group mt-8">
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="vertrieb">
+                Vertrieb
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="marketing">
+                Marketing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="controlling">
+                Controlling
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="personal">
+                Personalwesen
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="einkauf">
+                Einkauf
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="it">
+                IT
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="handlungsbedarf" value="weiss-nicht">
+                Ich weiss nicht
+              </label>
+            </div>
+          </div>
+
+          <!-- 6. Zahlenaufbereitung -->
+          <div class="form-group">
+            <label class="form-label">6. Wie werden Zahlen aufbereitet?</label>
+            <div class="checkbox-group mt-8">
+              <label class="checkbox-label">
+                <input type="radio" name="zahlen" value="excel" required>
+                Excel manuell
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="zahlen" value="erp">
+                ERP-System
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="zahlen" value="gemischt">
+                Beides gemischt
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="zahlen" value="unbekannt">
+                Unbekannt
+              </label>
+            </div>
+          </div>
+
+          <!-- 7. KPIs -->
+          <div class="form-group">
+            <label class="form-label">7. Wie oft sehen Sie aktuelle KPIs?</label>
+            <div class="checkbox-group mt-8">
+              <label class="checkbox-label">
+                <input type="radio" name="kpi" value="taeglich" required>
+                Taglich
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="kpi" value="woechentlich">
+                Wochentlich
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="kpi" value="monatlich">
+                Monatlich
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="kpi" value="seltener">
+                Seltener
+              </label>
+            </div>
+          </div>
+
+          <!-- 8. CRM -->
+          <div class="form-group">
+            <label class="form-label">8. CRM im Einsatz?</label>
+            <div class="checkbox-group mt-8">
+              <label class="checkbox-label">
+                <input type="radio" name="crm" value="ja" required>
+                Ja
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="crm" value="nein">
+                Nein
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="crm" value="teilweise">
+                Teilweise
+              </label>
+            </div>
+          </div>
+
+          <!-- 9. Manuelle Taetigkeiten -->
+          <div class="form-group">
+            <label class="form-label">9. Anteil manuelle, wiederholbare Taetigkeiten?</label>
+            <div class="checkbox-group mt-8">
+              <label class="checkbox-label">
+                <input type="radio" name="manuell" value="unter20" required>
+                Unter 20 %
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="manuell" value="20-40">
+                20 bis 40 %
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="manuell" value="ueber40">
+                Uber 40 %
+              </label>
+              <label class="checkbox-label">
+                <input type="radio" name="manuell" value="keine-einschaetzung">
+                Keine Einschatzung
+              </label>
+            </div>
+          </div>
+
+          <!-- 10. Groesstes Problem -->
+          <div class="form-group">
+            <label class="form-label" for="problem">10. Größtes operatives Problem heute</label>
+            <textarea id="problem" name="problem" class="form-textarea" rows="5" placeholder="Beschreiben Sie Ihr größtes operatives Problem in 3 bis 5 Satzen." required></textarea>
+          </div>
+
+          <!-- 11. Ziel -->
+          <div class="form-group">
+            <label class="form-label" for="ziel">11. Was soll sich in 12 Monaten verandert haben?</label>
+            <textarea id="ziel" name="ziel" class="form-textarea" rows="4" placeholder="2 bis 3 Satze genugen." required></textarea>
+          </div>
+
+          <!-- 12. E-Mail -->
+          <div class="form-group">
+            <label class="form-label" for="email">12. Ihre E-Mail-Adresse</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required>
+          </div>
+
+          <!-- 13. Name -->
+          <div class="form-group">
+            <label class="form-label" for="name">13. Ihr Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Vor- und Nachname" required>
+          </div>
+
+          <!-- 14. DSGVO -->
+          <div class="form-group">
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="dsgvo" required>
+                <span>Ich stimme der Verarbeitung meiner Daten zur Erstellung des Berichts zu. Weitere Informationen finden Sie in unserer <a href="datenschutz.html" style="color:var(--teal-b);">Datenschutzerklarung</a>.</span>
+              </label>
+            </div>
+          </div>
+
+          <hr class="form-divider">
+
+          <div class="payment-block">
+            <p class="payment-label">250 EUR - wir melden uns innerhalb von 24 Stunden</p>
+            <button type="button" id="audit-pay-btn" class="btn btn-teal btn-lg btn-full">
+              Bericht anfordern
+            </button>
+            <p class="payment-note">Wir melden uns innerhalb von 24 Stunden mit dem nachsten Schritt und dem Zahlungslink.</p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAS DER BERICHT ENTHAELT -->
+  <section class="bg-night-2" style="border-top:1px solid var(--w06);" aria-labelledby="bericht-heading">
+    <div class="section">
+      <span class="eyebrow">DER BERICHT</span>
+      <h2 id="bericht-heading">Was Sie <em>bekommen.</em></h2>
+
+      <div class="what-grid">
+        <div class="what-card">
+          <div class="what-title">Ist-Analyse</div>
+          <p class="what-body">Einordnung Ihrer Zahlen gegen Branchenbenchmarks. Transparenz daruber, wo Sie stehen.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-title">Hebelidentifikation</div>
+          <p class="what-body">Priorisierte Liste mit geschätztem Potenzial. Konkret, nicht abstrakt.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-title">Nachste Schritte</div>
+          <p class="what-body">Konkrete Empfehlungen ohne Berater-Deutsch. Umsetzbar vom ersten Tag an.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="footer-logo-text">DPM</span>
+          <span class="footer-logo-line"></span>
+        </div>
+        <p class="footer-slogan">Von der Strategie zur Substanz.</p>
+        <p class="footer-copy">&copy; 2026 Digital Partner Mittelstand GmbH</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="leistungen.html" class="footer-nav-link">Leistungen</a>
+        <a href="ueber-uns.html" class="footer-nav-link">Über uns</a>
+        <a href="referenzen.html" class="footer-nav-link">Referenzen</a>
+        <a href="kontakt.html" class="footer-nav-link">Kontakt</a>
+        <a href="impressum.html" class="footer-nav-link">Impressum</a>
+        <a href="datenschutz.html" class="footer-nav-link">Datenschutz</a>
+      </nav>
+      <div class="footer-social">
+        <span class="footer-social-label">Folgen Sie uns</span>
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/in/r0bertbock" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Robert Bock auf LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/timo-holtmann-06978277" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Timo Holtmann auf LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.instagram.com/dpmdeutschland" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="DPM auf Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cp \"/Users/BOCK_RB/Downloads/impressum.html\" \"/Users/BOCK_RB/Desktop/Claude All/Claude Code/DPM Deutschland Website/impressum.html\")",
+      "Bash(cp \"/Users/BOCK_RB/Downloads/datenschutz.html\" \"/Users/BOCK_RB/Desktop/Claude All/Claude Code/DPM Deutschland Website/datenschutz.html\")",
+      "Bash(cp \"/Users/BOCK_RB/Downloads/rob-bock.jpg\" \"/Users/BOCK_RB/Desktop/Claude All/Claude Code/DPM Deutschland Website/images/rob-bock.jpg\")",
+      "Bash(cp \"/Users/BOCK_RB/Downloads/timo-holtmann.jpg\" \"/Users/BOCK_RB/Desktop/Claude All/Claude Code/DPM Deutschland Website/images/timo-holtmann.jpg\")"
+    ]
+  }
+}

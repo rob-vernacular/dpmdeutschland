@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /mini-audit.html
+
+Sitemap: https://dpmdeutschland.de/sitemap.xml
