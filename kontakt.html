@@ -72,7 +72,7 @@
             <p class="card-text">Sie schildern Ihr Thema. Wir sagen direkt, ob und wie wir helfen können. Kein Pitch. Keine Folgeverpflichtung.</p>
           </div>
           <div class="card-footer">
-            <a href="#calendly-30min" class="btn btn-ghost btn-md btn-full">Termin buchen</a>
+            <a href="https://calendly.com/rob-dpmdeutschland/30min" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-md btn-full">Termin buchen</a>
           </div>
         </div>
 
@@ -86,7 +86,7 @@
             <p class="card-text">Wir bereiten uns vor. Sie bekommen konkrete Zahlen, priorisierte Hebel und einen schriftlichen Bericht. Wirkung vom ersten Termin an.</p>
           </div>
           <div class="card-footer">
-            <a href="#calendly-45min" class="btn btn-teal btn-md btn-full">Termin buchen</a>
+            <a href="https://calendly.com/rob-dpmdeutschland/30min" target="_blank" rel="noopener noreferrer" class="btn btn-teal btn-md btn-full">Termin buchen</a>
           </div>
         </div>
 
@@ -137,7 +137,7 @@
       <div class="contact-grid mt-32">
         <div class="contact-card">
           <div class="contact-name">Robert Bock</div>
-          <div class="contact-role">Strategie, Produkt, Delivery</div>
+          <div class="contact-role">Strategie, Produkt, Delivery · 25 Jahre</div>
           <a href="mailto:rob@dpmdeutschland.de" class="contact-email">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             rob@dpmdeutschland.de
@@ -172,12 +172,12 @@
         <p class="newsletter-sub">Ein Thema. Eine Zahl. Ein Hebel. Kein Fulltext.</p>
       </div>
       <div>
-        <!-- MAILCHIMP / BREVO EMBED HIER -->
-        <div class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse für Newsletter">
-          <button class="btn btn-teal btn-md" type="submit">Anmelden</button>
+        <div class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse für Newsletter">
+          <button class="btn btn-teal btn-md" id="newsletter-btn" type="button">Anmelden</button>
         </div>
-        <p style="font-size:11px; color:var(--w30); margin-top:10px;">Kein Spam. Jederzeit abbestellbar. Datenschutz beachten.</p>
+        <p id="newsletter-msg" style="font-size:13px; margin-top:10px; min-height:18px;"></p>
+        <p style="font-size:11px; color:var(--w30); margin-top:4px;">Kein Spam. Jederzeit abbestellbar. Datenschutz beachten.</p>
       </div>
     </div>
   </section>

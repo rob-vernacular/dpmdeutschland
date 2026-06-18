@@ -166,12 +166,12 @@
 
   if (stickyErstgespraech) {
     stickyErstgespraech.addEventListener('click', function () {
-      window.location.href = 'kontakt.html#erstgespraech';
+      window.open('https://calendly.com/rob-dpmdeutschland/30min', '_blank', 'noopener,noreferrer');
     });
   }
   if (stickyOptimierung) {
     stickyOptimierung.addEventListener('click', function () {
-      window.location.href = 'kontakt.html#optimierung';
+      window.open('https://calendly.com/rob-dpmdeutschland/30min', '_blank', 'noopener,noreferrer');
     });
   }
   if (stickyAudit) {
@@ -516,4 +516,55 @@
     initCasesRotator();
   }
 
+})();
+
+/* ── Newsletter Brevo Integration ── */
+(function () {
+  var btn = document.getElementById('newsletter-btn');
+  var input = document.getElementById('newsletter-email');
+  var msg = document.getElementById('newsletter-msg');
+
+  if (!btn || !input || !msg) return;
+
+  btn.addEventListener('click', function () {
+    var email = input.value.trim();
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.style.color = '#e05c5c';
+      msg.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '…';
+    msg.style.color = 'var(--w60)';
+    msg.textContent = '';
+
+    fetch('https://formspree.io/f/xgobjejp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ email: email })
+    })
+    .then(function (res) {
+      return res.json().then(function (data) {
+        if (res.ok) {
+          msg.style.color = '#5cbd8a';
+          msg.textContent = 'Angemeldet. Willkommen an Bord.';
+          input.value = '';
+          btn.textContent = '✓';
+        } else {
+          throw new Error(data.error || 'Fehler');
+        }
+      });
+    })
+    .catch(function (err) {
+      msg.style.color = '#e05c5c';
+      msg.textContent = 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.';
+      btn.disabled = false;
+      btn.textContent = 'Anmelden';
+    });
+  });
 })();
